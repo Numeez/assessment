@@ -19,7 +19,7 @@ io.use((socket,next)=>{
 })
 io.on('connection',(socket)=>{
 console.log(socket.id)
-console.log(socket.username)
+
 
 
 socket.on('server-info',(message)=>{
@@ -50,7 +50,7 @@ function getUsernamefromToken(token){
     if(err){
      console.log(err)
     }
-    console.log(user.username)
+    
     return user.username
     
  })
