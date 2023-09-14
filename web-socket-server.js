@@ -9,7 +9,7 @@ const io = require('socket.io')(3000,{
 io.use((socket,next)=>{
     const token = socket.handshake.auth.token
     if(token){
-        console.log(getUsernamefromToken(token))
+       
        socket.username = getUsernamefromToken(token)
         next();
     }else{
