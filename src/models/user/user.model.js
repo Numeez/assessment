@@ -26,6 +26,7 @@ async function getUsers(skip,limit){
     '_id':0,
     '__v':0
    })
+   .sort({userId:1})
    .skip(skip)
    .limit(limit)
 }
