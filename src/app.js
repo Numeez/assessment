@@ -8,8 +8,8 @@ const cache = apicache.middleware
 app = express();
 app.use(express.json())
 app.use(authRouter)
-// app.use(cache('5 minutes'))
 
+app.use(cache('5 minutes'))
 app.use(userRouter)
 app.all("*",(req,res,next)=>{
     return res.status(404).json({
