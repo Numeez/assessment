@@ -8,7 +8,7 @@ const cache = apicache.middleware
 
 
 
-userRouter.get('/getUsers',authenticateToken,cache('5 minutes'),getAllUsers)
+userRouter.get('/getUsers',authenticateToken,getAllUsers)
 userRouter.post('/addUser',addUser)
 userRouter.delete('/deleteUser/:id',deleteUser)
 userRouter.get('/getUser/:id',getSingleUser)
